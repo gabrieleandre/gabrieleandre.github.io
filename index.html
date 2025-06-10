@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Para Meu Amor ❤️ - Gabriel para André</title>
+    <meta name="description" content="Uma declaração especial de amor do Gabriel para o André no Dia dos Namorados">
+    <meta name="theme-color" content="#667eea">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="floating-hearts">
+                <i class="fas fa-heart heart-1"></i>
+                <i class="fas fa-heart heart-2"></i>
+                <i class="fas fa-heart heart-3"></i>
+                <i class="fas fa-heart heart-4"></i>
+                <i class="fas fa-heart heart-5"></i>
+            </div>            <h1 class="hero-title">Para Meu Amor, André</h1>
+            <p class="hero-subtitle">Uma declaração especial para você ❤️</p>
+            <button class="scroll-btn" onclick="scrollToSection('story')">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>    </section>
+
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2 class="section-title">Nossa História</h2>
+            <div class="story-content">
+                <div class="story-text">                    <p class="romantic-text">
+                        Meu amor, cada momento ao seu lado é uma página especial em nossa história de amor.
+                        Desde o primeiro olhar, soube que você era a pessoa com quem queria 
+                        compartilhar todos os meus dias.
+                    </p>
+                    <p class="romantic-text">
+                        Você trouxe cores para minha vida, transformou momentos simples em 
+                        memórias preciosas, e fez meu coração descobrir um amor que nem 
+                        sabia que existia. Obrigado por ser você, meu amor.
+                    </p>
+                    <div class="love-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"O amor não se vê com os olhos, mas com o coração"</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Momentos</h2>
+            <div class="gallery-grid">
+                <div class="photo-item" onclick="openModal('imagens/1749574211502.jpg')">
+                    <div class="photo-frame">
+                        <img src="imagens/1749574211502.jpg" alt="Nosso momento especial" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal('imagens/1749574211510.jpg')">
+                    <div class="photo-frame">
+                        <img src="imagens/1749574211510.jpg" alt="Nosso momento especial" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal('imagens/1749574211518.jpg')">
+                    <div class="photo-frame">
+                        <img src="imagens/1749574211518.jpg" alt="Nosso momento especial" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal('imagens/1749574211526.jpg')">
+                    <div class="photo-frame">
+                        <img src="imagens/1749574211526.jpg" alt="Nosso momento especial" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal('imagens/1749574248976.jpg')">
+                    <div class="photo-frame">
+                        <img src="imagens/1749574248976.jpg" alt="Nosso momento especial" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </section>
+
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Foto ampliada">
+            <div class="modal-navigation">
+                <button class="nav-btn prev-btn" onclick="previousImage(event)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" onclick="nextImage(event)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>    </div>
+
+    <section class="music-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Música</h2>
+            <div class="music-player">
+                <div class="music-info">
+                    <i class="fas fa-music music-icon"></i>
+                    <div class="music-details">
+                        <h3 id="songTitle">Espetáculo Estranho</h3>
+                        <p id="songArtist">Anavitória</p>
+                    </div>
+                </div>                <div class="music-controls">
+                    <button class="control-btn" onclick="openSpotifyInNewTab()">
+                        <i class="fab fa-spotify"></i>
+                    </button>
+                </div>            </div>
+
+            <div class="spotify-player">
+                <iframe 
+                    id="spotifyPlayer"
+                    src="https://open.spotify.com/embed/track/7325x5azZOlWkYL9EpnqW5?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    style="border-radius: 12px;"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation">
+                </iframe>            </div>
+
+            <div class="youtube-fallback" id="youtubeFallback" style="display: none;">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/aTto3pHHuraY?enablejsapi=1" 
+                    title="Anavitória - Espetáculo Estranho" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="border-radius: 12px;">
+                </iframe>
+            </div>
+        </div>    </section>
+
+    <section class="final-section">
+        <div class="container">
+            <div class="final-message">
+                <h2 class="final-title">Feliz Dia dos Namorados!</h2>                <p class="final-text">
+                    André, que este seja apenas o começo de muitos outros dias especiais juntos.
+                    Você é meu presente mais precioso, minha inspiração diária e minha 
+                    razão de sorrir todos os dias.
+                </p>
+                <p class="signature">Com todo meu amor, Gabriel ❤️</p>
+            </div>
+        </div>
+    </section>    <script src="script.js"></script>
+</body>
+</html>
